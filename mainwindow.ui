@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>896</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Parametryzator V2</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../../Matilda-units/gui/image-and-font/res.qrc">
+    <normaloff>:/katynko/svg4/dashboard-red.svg</normaloff>:/katynko/svg4/dashboard-red.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>9</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>3</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget4log" native="true"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>896</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionHome"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionApplication_log"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionGlobal"/>
+    <addaction name="actionPrint"/>
+    <addaction name="actionPoll"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuSettings"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionHome">
+   <property name="icon">
+    <iconset resource="../../../Matilda-units/gui/image-and-font/res.qrc">
+     <normaloff>:/katynko/svg/go-home.svg</normaloff>:/katynko/svg/go-home.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Home</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="../../../Matilda-units/gui/image-and-font/res.qrc">
+     <normaloff>:/katynko/svg/window-close.svg</normaloff>:/katynko/svg/window-close.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionApplication_log">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../Matilda-units/gui/image-and-font/res.qrc">
+     <normaloff>:/katynko/svg/view-list-text.svg</normaloff>:/katynko/svg/view-list-text.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Application log</string>
+   </property>
+  </action>
+  <action name="actionGlobal">
+   <property name="icon">
+    <iconset resource="../../../Matilda-units/gui/image-and-font/res.qrc">
+     <normaloff>:/katynko/svg2/lc_browseview.svg</normaloff>:/katynko/svg2/lc_browseview.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Global</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="../../../Matilda-units/gui/image-and-font/res.qrc">
+     <normaloff>:/katynko/svg/document-print.svg</normaloff>:/katynko/svg/document-print.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionPoll">
+   <property name="icon">
+    <iconset resource="../../../Matilda-units/gui/image-and-font/res.qrc">
+     <normaloff>:/katynko/svg2/kt-queue-manager.svg</normaloff>:/katynko/svg2/kt-queue-manager.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Poll</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../../../Matilda-units/gui/image-and-font/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

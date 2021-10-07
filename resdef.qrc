@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>def/default.html</file>
+        <file>def/logo4.png</file>
+        <file>def/thick-line.png</file>
+        <file>def/meshnetwork_tile.png</file>
+    </qresource>
+</RCC>

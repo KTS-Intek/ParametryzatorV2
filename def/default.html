@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+
+
+                  table { width:100%; }table, th, td { border: 1px solid black; border-collapse: collapse; }
+                  th, td { padding: 5px; text-align: left; } table#t01 tr:nth-child(even) { background-color: #eee; }
+                  table#t01 tr:nth-child(odd) { background-color:#fff; }table#t01 th{ background-color: gray; color: black;}
+
+
+                 body { background-image: url("$logoback");  background-repeat: repeat; }
+
+
+
+       </style>
+     </head>
+  <body>
+  <font face = "Noto Sans">
+
+<table id="tblheader" style=" border-width:0px;border-style:solid;border-color:#000000;margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px" align="center" width="100%"  cellspacing="0" cellpadding="1">
+        <tr>
+                <td><img src="$logo" alt="logo" style="margin-left:0px;float:left;" width="250"  >  </td>
+                <td style="text-align:right;margin-right:10px;padding-right:12%">$pteAddrs</td>
+        </tr>
+</table>
+
+
+<div >
+<img src="$horLine" alt="logo" style="margin-left:0px;float:left;" height=5 width="630";  >
+
+</div>
+
+<div><b>ВИХ.№ 0$yy/$outIndx1</b> </div>
+ <div><b>Від $outDate1 р.</b></div>
+          <br>
+         <p  style="text-align:center;margin-left:0px;margin-right:0px">
+             <font size="4">Протокол параметризації № $outDate3-$outIndx1 та перевірки приладів диференційованого за періодами часу обліку споживання енергії</font>
+         </p>
+
+
+
+<div  style="margin-left:2%;margin-right:2%">
+          <dl>
+
+                 <dt><p>1. Адреса: $leConsumerAddress</p></dt>
+
+                 <dt><p>2. Дані лічильника електроенергії: $meterTypeH $meterTypeE ($meterFrom)
+
+                        <table style=" border-width:2px;border-style:solid;border-color:#000000;margin-top:5px; margin-bottom:5px; margin-left:0px; margin-right:0px" align="center" width="100%" cellspacing="0" cellpadding="1">
+                        <tr><td>Тип лічильника                  </td> <td>$meterTypeM                           </td></tr>
+                        <tr><td>Струм                        </td> <td>$cbxCurrent                           </td></tr>
+                        <tr><td>Напруга                      </td> <td>$meterVolta                           </td></tr>
+                        <tr><td>Клас точночті                   </td> <td>$sbPrecision                          </td></tr>
+                        <tr><td>Заводський номер                </td> <td>$meterSN                              </td></tr>
+                        <tr><td>Мережева адреса                 </td> <td>$meterNI                              </td></tr>
+                        <tr><td>Коеф. трансформації напруги     </td> <td>$sbCoefitientU                        </td></tr>
+                        <tr><td>Коеф. трансформації струму      </td> <td>$sbCoefitientI                        </td></tr>
+                        <tr><td>Опції реле                      </td> <td><font size="2">$aboutRelay</font>     </td></tr>
+
+
+                        </table>
+                </p></dt>
+
+                <dt><p>3. Програмування лічильника: Запрограмовано на $meterTariffCount зони<br>$meterTariffSchedule
+</p></dt>
+
+          </dl>
+
+
+<p >
+Лічильник повірений державним повірителем і відповідає усім вимогам метрологічного законодавства України, що дає дозвіл на його (лічильника) застосування в Україні.
+</p>
+<p>
+Лічильник має вбудований радіоінтерфейс EMBEE, що дозволить знімати показання двох(трьох) зон з лічильника на відстані в межах садового товариства, а також синхронізувати годинник лічильника, щоб виключити крадіжку електроенергії на невідповідності тарифних зон, та позбавити в майбутньому виконання корекції часу вбудованого годинника.
+</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table style=" border-width:0px;border-style:solid;border-color:#000000;margin-top:10px; margin-bottom:10px; margin-left:0px; margin-right:0px" align="center" width="100%" cellspacing="0" cellpadding="1">
+
+                             <tr><td>Параметризацію виконав</td>   <td> пров. інженер<br>ТОВ "КТС-ІНТЕК"</td>          		<td style="text-align:right;margin-right:120px">____________________________________</td></tr>
+
+
+
+        </table>
+
+</font>
+ </body></html>

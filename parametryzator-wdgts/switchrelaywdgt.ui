@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SwitchRelayWdgt</class>
+ <widget class="QWidget" name="SwitchRelayWdgt">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>343</width>
+    <height>294</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>322</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="rbRead">
+     <property name="text">
+      <string>Read All</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../../../../Matilda-units/gui/image-and-font/res.qrc">
+       <normaloff>:/katynko/svg3/relay-load-unknown.svg</normaloff>:/katynko/svg3/relay-load-unknown.svg</iconset>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>322</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="rbMainOff">
+     <property name="text">
+      <string>Main Load off</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../../../../Matilda-units/gui/image-and-font/res.qrc">
+       <normaloff>:/katynko/svg3/relay-load-off.svg</normaloff>:/katynko/svg3/relay-load-off.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="rbMainOn">
+     <property name="text">
+      <string>Main Load on</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../../../../Matilda-units/gui/image-and-font/res.qrc">
+       <normaloff>:/katynko/svg3/relay-load-on.svg</normaloff>:/katynko/svg3/relay-load-on.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>322</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="rbSecondOff">
+     <property name="text">
+      <string>Second Load off</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../../../../Matilda-units/gui/image-and-font/res.qrc">
+       <normaloff>:/katynko/svg3/relay-load-off.svg</normaloff>:/katynko/svg3/relay-load-off.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="rbSecondOn">
+     <property name="text">
+      <string>Second Load on</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../../../../Matilda-units/gui/image-and-font/res.qrc">
+       <normaloff>:/katynko/svg3/relay-load-on.svg</normaloff>:/katynko/svg3/relay-load-on.svg</iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>51</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../../../Matilda-units/gui/image-and-font/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
