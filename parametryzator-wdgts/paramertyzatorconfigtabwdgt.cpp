@@ -152,7 +152,13 @@ void ParamertyzatorConfigTabWdgt::onTabCreated(const int &pollcode, DbDataForm *
         w->setSpecialCustomMenu(viewmedium->getActionl());
         connect(w, &DbDataFormSmplV2::onSpecialCustomActionClickedData, viewmedium, &ParametryzatorViewMedium::onSpecialCustomActionClickedData);
 
-        connect(w->lastTv, &QTableView::doubleClicked, this, &ParamertyzatorConfigTabWdgt::onLastTvClicked);
+        if(w->getInitDone()){
+            connect(w->lastTv, &QTableView::doubleClicked, this, &ParamertyzatorConfigTabWdgt::onLastTvClicked);
+        }else{
+            connect(w, &DbDataFormSmplV2::pageEndInit, [=]{
+                connect(w->lastTv, &QTableView::doubleClicked, this, &ParamertyzatorConfigTabWdgt::onLastTvClicked);
+            });
+        }
     }
 
 
