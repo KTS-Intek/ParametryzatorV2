@@ -11,7 +11,7 @@ CONFIG += c++11
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
 DEFINES += APPLCTN_NAME=\\\"parametryzatorv2\\\"
-DEFINES += SMPLCOVERMODE
+#DEFINES += SMPLCOVERMODE
 DEFINES += HASGUI4USR
 DEFINES += HASSETTLOADEREMUL
 #DEFINES += HASMAPS I don't need this
@@ -21,7 +21,7 @@ DEFINES += DISABLE_PROC_MANAGER
 DEFINES += ITISPARAMETRYZATOR
 
 
-VERSION = 1.0.0
+VERSION = 1.0.1
 
 DEFINES += "MYAPPNAME=\"\\\"Parametryzator V2\\\"\""
 DEFINES += "MYAPPOWNER=\"\\\"KTS-Intek Ltd\\\"\""
@@ -109,6 +109,7 @@ include(../../../Matilda-units/matilda-bbb/matilda-bbb-serverside-shared/matilda
 
 include(../../../Matilda-units/charts/widget-charts/widget-charts.pri)
 
+include(../../../Matilda-units/gui/guisett-shared-ucon/guisett-shared-ucon.pri)
 
 SOURCES += \
     main.cpp \

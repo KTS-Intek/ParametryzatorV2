@@ -152,7 +152,7 @@ void MainWindow::initPage()
     lastToolBar = ui->mainToolBar;
     lastWdgtTag = 0xFF;
 
-    createGuiHelper(ui->stackedWidget, 12, 5);
+    createGuiHelper(ui->stackedWidget, true);
 
     guiHelper->ucDeviceTreeW = new UCDeviceTreeWatcher(true, true, this);
 
@@ -273,7 +273,7 @@ void MainWindow::createParametryzatorTaskManager()
 
     connect(thread, SIGNAL(started()), zbyrator, SLOT(onThreadStarted()));
 
-    connect(paramMedium, SIGNAL(command4dev(quint16,QString))    , zbyrator, SIGNAL(command4devStr(quint16,QString)) );
+    connect(paramMedium, SIGNAL(command4devStr(quint16,QString))    , zbyrator, SIGNAL(command4devStr(quint16,QString)) );
     connect(paramMedium, SIGNAL(command4dev(quint16,QVariantMap)), zbyrator, SIGNAL(command4dev(quint16,QVariantMap)) );
 
 //    connect(paramMedium, &ParametryzatorGuiMedium::onConfigChanged     , zbyrator, &MeterManager::onConfigChanged      );
@@ -319,7 +319,7 @@ void MainWindow::createParametryzatorTaskManager()
     connect(zbyrator, &MeterManager::requestToSwitchIgnoreCycles, paramMedium, &ParametryzatorGuiMedium::requestToSwitchIgnoreCycles);
 
 
-    connect(guiHelper, SIGNAL(mWrite2RemoteDev(quint16,QVariant,QWidget*)), paramMedium, SLOT(mWrite2RemoteDev(quint16,QVariant)));
+//    connect(guiHelper, SIGNAL(mWrite2RemoteDev(quint16,QVariant,QWidget*)), paramMedium, SLOT(mWrite2RemoteDev(quint16,QVariant)));
 
 
     QTimer::singleShot(1111, thread, SLOT(start()) );
@@ -491,7 +491,8 @@ QWidget *MainWindow::createSTACK_PAGE_IFACE()
     ZbyrIfaceSett * w = new ZbyrIfaceSett(false, tr("Communication settings"),guiHelper, this);
 
     connect(paramMedium, SIGNAL(setIfaceSett(QVariantHash)), w, SLOT(setPageSett(QVariantHash)) );
-    connect(paramMedium, SIGNAL(setTcpClientCompliter(QStringList)), w, SLOT(setTcpClientCompliter(QStringList)));
+//    connect(paramMedium, SIGNAL(setTcpClientCompliter(QStringList)), w, SLOT(setTcpClientCompliter(QStringList)));
+    connect(paramMedium, &ParametryzatorGuiMedium::setTcpClientCompliter, w, &ZbyrIfaceSett::setTcpClientCompliter);
 
     connect(w, SIGNAL(setNewSettings(QVariantHash)), paramMedium, SLOT(setNewSettings(QVariantHash)));
     connect(w, SIGNAL(sendMeIfaceSett()), paramMedium, SLOT(sendMeIfaceSett()) );
@@ -532,7 +533,7 @@ QWidget *MainWindow::createSTACK_PAGE_HISTORY()
 
 //data from db must go via ucDeviceTreeW
 
-    connect(w, SIGNAL(data2dbMediumExt(quint16,QVariant)), paramMedium, SIGNAL(data2dbMedium(quint16,QVariant)) );
+//    connect(w, SIGNAL(data2dbMediumExt(quint16,QVariant)), paramMedium, SIGNAL(data2dbMedium(quint16,QVariant)) );
     connect(w, &GetParametryzatorHistory::stopDbReading, paramMedium, &ParametryzatorGuiMedium::stopReadDatabase);
 
     connect(paramMedium, SIGNAL(setLblWaitTxtDatabase(QString)), w, SIGNAL(setLblWaitTxtDatabase(QString)));

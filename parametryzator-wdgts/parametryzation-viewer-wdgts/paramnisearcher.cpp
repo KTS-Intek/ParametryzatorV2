@@ -164,9 +164,11 @@ void ParamNISearcher::refreshTableExtraData()
 void ParamNISearcher::onLastTvClicked(const QModelIndex &index)
 {
 
-    const QString urlprefix = "file://"
+    const QString urlprefix =
     #ifdef Q_OS_WIN
-+ "/"
+            "file:///"
+        #else
+"file://"
     #endif
             ;
 
