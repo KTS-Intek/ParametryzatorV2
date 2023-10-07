@@ -161,6 +161,8 @@ void RelaySettViewer::setPageSett(const QString &relay)
     const QStringList l = relay.split(" ", QString::SkipEmptyParts);
 
 
+    qDebug() << "RelaySettViewer::setPageSett relay=" << l;
+
     listwdgt->setTheseListsPairsStrL(l,  getAllListItems());
 
 
@@ -231,7 +233,8 @@ void RelaySettViewer::applyDefaultSett()
 void RelaySettViewer::createWidgets()
 {
     listwdgt = new TwoListsWdgt(!isEditable, true, this);//editable, unique values only
-    ui->vl4wdgt->addWidget(listwdgt);
+//    ui->vl4wdgt->addWidget(listwdgt);
+    ui->vl4wdgt->insertWidget(0, listwdgt);
 
     ui->sbTimeoutOnBttn->setEnabled(isEditable);//(0);
     ui->sbTimeoutOnCurrent->setEnabled(isEditable);//(60); //1 minute

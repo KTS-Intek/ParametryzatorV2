@@ -99,6 +99,11 @@ void ParametryzationProfilesWdgt::initPage()
 {
     setupObjects(ui->horizontalLayout_2, ui->tvTable, nullptr, nullptr, ui->leFilter, SETT_FILTERS_FREE_4);
     connect(this, &ParametryzationProfilesWdgt::openContextMenu, this, &ParametryzationProfilesWdgt::on_tvTable_customContextMenuRequested);
+//    connect(lastTv, &QTableView::customContextMenuRequested, this, &ParametryzationProfilesWdgt::ontvTable_customContextMenuRequested);
+
+    connect(this, &ParametryzationProfilesWdgt::onUserChangedTheModel, this, &ParametryzationProfilesWdgt::onSettingsChangedSlot);
+
+
     StandardItemModelHelper::setModelHorizontalHeaderItems(model, QStringList());
 
 
@@ -146,12 +151,24 @@ void ParametryzationProfilesWdgt::on_tvTable_clicked(const QModelIndex &index)
 void ParametryzationProfilesWdgt::on_tvTable_customContextMenuRequested(const QPoint &pos)
 {
     listLastProfNames = StandardItemModelHelper::getColText(0, -1, model);
-    connect(gHelper, SIGNAL(onModelChanged(int)), this, SLOT(onSettingsChangedSlot()));
+//    connect(gHelper, SIGNAL(onModelChanged(int)), this, SLOT(onSettingsChangedSlot()));
+
+
+    createCustomMenu(pos,
+                        isEditableMode() ?
+                        (GuiHelper::ShowReset|GuiHelper::DeleteSelected|GuiHelper::ShowAdd2Filter|GuiHelper::ShowExport|GuiHelper::ShowOnlyCopy) :
+                            (GuiHelper::ShowReset|GuiHelper::ShowAdd2Filter|GuiHelper::ShowExport|GuiHelper::ShowOnlyCopy)
+                            ,
+                        getCopyPastTag(),getDefSaveFileName()
+                     );
+
 //    gHelper->createCustomMenu(pos, ui->tvTable, isEditableMode() ?
 //                                   (GuiHelper::ShowReset|GuiHelper::ShowExport|GuiHelper::ShowCopy|GuiHelper::DeleteSelected)
 //                                :  (GuiHelper::ShowReset|GuiHelper::ShowExport|GuiHelper::ShowCopy),
 //                              CLBRD_SMPL_PRXTBL, ShowMessHelperCore::matildaFileName(windowTitle()));
-    disconnect(gHelper, SIGNAL(onModelChanged(int)), this, SLOT(onSettingsChangedSlot()));
+//    disconnect(gHelper, SIGNAL(onModelChanged(int)), this, SLOT(onSettingsChangedSlot()));
+
+//    connect(onUserChangedTheModel)
 
 
 }

@@ -28,10 +28,10 @@ void ParametryzationProfileEditor::createWidgets(int refheight)
     w->setLayout(l);
     l->addWidget(settw);
 
-    QWidget *spacer = new QWidget(this);
-    spacer->resize(5,5);
-    spacer->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
-    l->addWidget(spacer);
+//    QWidget *spacer = new QWidget(this);
+//    spacer->resize(5,5);
+//    spacer->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
+//    l->addWidget(spacer);
 
     setSaCentralWidgetAndRefHeight(w, 10, 600, refheight);
     clearThePage();

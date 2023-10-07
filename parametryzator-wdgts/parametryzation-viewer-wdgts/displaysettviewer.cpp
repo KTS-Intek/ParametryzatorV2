@@ -189,7 +189,9 @@ void DisplaySettViewer::applyDefaultSett()
 void DisplaySettViewer::createWidgets()
 {
     listwdgt = new TwoListsWdgt(!isEditable, true, this);//editable, unique values only
-    ui->vl4wdgt->addWidget(listwdgt);
+//    ui->vl4wdgt->addWidget(listwdgt);
+//    ui->vl4wdgt->
+    ui->vl4wdgt->insertWidget(0, listwdgt);
 
     ui->cbxEnableAutoScroll->setEnabled(isEditable);//true);
     ui->sbAutoscrollSec->setEnabled(isEditable);//7);
